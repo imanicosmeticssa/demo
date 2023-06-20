@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Imani Cosmetics</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"/>
+	
+	<link rel="stylesheet" href="CSS.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+
+<body>
+
+<section class="header">
+
+<nav>
+		<a href="First Page.html"><img src="Images/Imani2.png"></a>
+		<div class="nav-links" id="navlinks">
+		<i class="fa fa-times" onclick="hideMenu()"></i>
+			<ul>
+				<li><a href="First Page.html">HOME</a></li>
+				<li><a href="#gettoknowus">GET TO KNOW US</a></li>
+				<li><a href="#products">PRODUCTS</a></li>
+				<li><a href="">MEDIA</a></li>
+				<li><a href="#contactus">GET IN TOUCH</a></li>
+			</ul>
+		</div>
+		<i class="fa fa-bars" onclick="showMenu()"></i>
+	</nav>
+	
+<div class="text-box">
+	<h1>Your one stop store for your beauty supplies.</h1>
+	<p>We simplify your beauty world by providing you with the one stop store for your beauty supplies,</br>Always remember that beauty starts within...</p>
+	<a href="#products" class="hero-btn">Let's Go Shopping!</a>
+</div>
+	
+
+ </section> 
+ 
+ <!-----Get to know us section----->
+ 
+ <section class="gettoknowus" id="gettoknowus">
+ 
+	<h1>Imani Cosmetics</h1>
+	
+	<p> We have faith in people, and we believe in unity, our love for people keeps us authentic.</br>
+	Our synthetic, wood and authentic process of creation for all our products, will ensure that you feel loved, protected and safe, </br>while consuming our Imani Cosmetics products for daily use.</p>
+ 
+	<div class="icons">
+		<i class="fa fa-facebook"></i>
+		<i class="fa fa-twitter"></i>
+		<i class="fa fa-instagram"></i>
+		<i class="fa fa-envelope"></i>
+ </section>
+ 
+ <!----- Products----->
+ 
+ <section class="products" id="products">
+ 
+ <h1>What would you like?</h1>
+	
+	<div class="jameela1">
+	
+		<div class="productdetails">
+			<h5>Jameela 13 Piece Brushes</h5>
+			<a href=""><img src="Images/jameela1.png"></a>
+			<h3><i class="fa fa-credit-card-alt" aria-hidden="true"></i> R650.00</h3>
+			<p><i class="fa fa-truck" aria-hidden="true"></i> Includes FREE delivery across South Africa</p>
+			<a href="" class="buy-btn"><i class="fa fa-shopping-cart"></i> BUY NOW</a>
+		</div>
+	
+		<div class="productdetails">
+			<h5>The Imani 12 Piece Brushes</h5>
+			<a href=""><img src="Images/Image5.png"></a>
+			<h3><i class="fa fa-credit-card-alt" aria-hidden="true"></i> R650.00</h3>
+			<p><i class="fa fa-truck" aria-hidden="true"></i> Includes FREE delivery across South Africa</p>
+			<a href="" class="buy-btn"><i class="fa fa-shopping-cart"></i> BUY NOW</a>
+			
+		</div>
+	
+		<div class="productdetails">
+			<h5>Jameela 13 Piece Brushes</h5>
+			<a href=""><img src="Images/jameela3.jpeg"></a>
+			<h3><i class="fa fa-credit-card-alt" aria-hidden="true"></i> R650.00</h3>
+			<p><i class="fa fa-truck" aria-hidden="true"></i> Includes FREE delivery across South Africa</p>
+			<a href="" class="buy-btn"><i class="fa fa-shopping-cart"></i> BUY NOW</a>
+			
+		</div>
+	</div>
+	
+ </section>
+ 
+ <!---------Media----------->
+ 
+ <!------Contact Us--------->
+ 
+ <section class="contactus" id="contactus">
+ 
+	<h1>Get In Touch</h1>
+	<p>We would like to respond to all your beauty queries and help you succeed.</p>
+	<div class="container">
+						
+			<form action="https://formsubmit.co/imanicosmeticssa@gmail.com" method="POST">
+					<input type="text" id="name" placeholder=" Your Name" required>
+					<input type="email" id="email" placeholder=" Email Address" required>
+					<input type="text" id="phone" placeholder=" Phone Number" required>
+					<textarea id="message" rows="4" placeholder="Feel free to get in touch with us."></textarea>
+					<button type="submit" onclick ="sendMail()">Submit</button>
+			</form>
+			</div>
+
+ 
+ </section>
+ 
+ 
+ 
+ <!-----JavaScript for the side menu------->
+ <script>
+ 
+	var navlinks = document.getElementById("navlinks");
+	 
+	function showMenu(){
+		navlinks.style.right = "0";
+	}
+	function hideMenu(){
+		navlinks.style.right = "-200px";
+	} 
+ </script>
+ 
+ 
+ <!-----JavaScript for the form------->
+ 
+<!--  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+
+   function emailjs()
+   .init("D2yl6Oujvt-JqyQGE"){};
+   function sendMail(){
+	
+	var params = {
+		
+		name: document.getElementById("name").value,
+		email: document.getElementById("email").value,
+		phone: document.getElementById("phone").value,
+		message: document.getElementById("message").value,
+	};
+	
+	const servideID = "service_u8x5fcu";
+    const templateID = "template_52bfyqe"
+	
+	emailjs.send(serviceID,templateID,params)
+	.then(
+	(res =>{
+		document.getElementById("name").value = "";
+		document.getElementById("email").value ="";
+		document.getElementById("phone").value ="";
+		document.getElementById("message").value ="";
+		console.log(res);
+		alert("Your message was sent successfully");
+		
+	})
+.catch ((err) => console.log(err));
+}
+
+</script> -->
+ 
+
+<!------------<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+	function sendEmail(){
+	
+			Email.send({
+			Host : "smtp.gmail.com",
+			Username : "imanicosmeticssa@gmail",
+			Password : "Imani09@09",
+			To : 'imanicosmeticssa@gmail.com',
+			From : document.getElementById("email").value,
+			Subject : "New Beauty Enquiry",
+			Body : "And this is the body"
+		}).then(
+		  message => alert(message)
+		);
+}
+</script>----------->
+
+ 
+</body> 
+</html>
